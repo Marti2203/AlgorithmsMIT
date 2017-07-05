@@ -1,4 +1,5 @@
 #include "base.h"
+#define Size 10
 void InsertionSort(int* arr,int size, int (*compare)(int,int))
 {
     for(int j=1;j<size;j++)
