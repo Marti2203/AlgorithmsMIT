@@ -2,7 +2,8 @@
 
 int* addbin(int *a,int aSize,int *b,int bSize)
 {
-    int carry=0,    
+    int 
+    carry=0,    
     minSize=min(bSize,aSize),
     maxSize=max(bSize,aSize),
     *maxArr=(aSize > bSize? a: b),

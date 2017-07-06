@@ -1,5 +1,4 @@
 #include "base.h"
-#define Size 10
 void InsertionSort(int* arr,int size, int (*compare)(int,int))
 {
     for(int j=1;j<size;j++)
@@ -22,17 +21,8 @@ int ascending(int a,int b){return a>b;}
 
 int main()
 {
-    int* testArr=malloc(Size*sizeof(int));
-    testArr[0]=6;
-    testArr[1]=8;
-    testArr[2]=3;
-    testArr[3]=19;
-    testArr[4]=100;
-    testArr[5]=84;
-    testArr[6]=222;
-    testArr[7]=11;
-    testArr[8]=60;
-    testArr[9]=333;
+
+int* testArr=getTestArr();
     //printArr(testArr,0,Size)
 
     InsertionSort(testArr,Size,ascending);

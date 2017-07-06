@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define swap(x,y) do{(x)^=(y); (y)^=(x); (x)^=(y);}while(0);
+#include <string.h>
+#define swap(x,y) do{ if((x)!=(y)){(x)^=(y); (y)^=(x); (x)^=(y);} }while(0);
 #define min(x,y) ( (x) > (y) ? (y) : (x) )
 #define max(x,y) ( (x) > (y) ? (x) : (y) )
 #define and &&
@@ -14,3 +15,20 @@ int* reversed(int *arr,int size)
     return reversed;
 }
 int identity(int a){return a;}
+
+#define Size 10
+int* getTestArr(){
+    int* testArr=malloc(Size*sizeof(int));
+    testArr[0]=6;
+    testArr[1]=8;
+    testArr[2]=3;
+    testArr[3]=19;
+    testArr[4]=100;
+    testArr[5]=84;
+    testArr[6]=222;
+    testArr[7]=11;
+    testArr[8]=60;
+    testArr[9]=333;
+    
+    return testArr;
+}
