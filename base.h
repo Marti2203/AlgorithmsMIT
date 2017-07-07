@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define swap(x,y) do{ if((x)!=(y)){(x)^=(y); (y)^=(x); (x)^=(y);} }while(0);
+#include <stdint.h>
+
+#define swap(x,y) { if((x)!=(y)){(x)^=(y); (y)^=(x); (x)^=(y);} }
 #define min(x,y) ( (x) > (y) ? (y) : (x) )
 #define max(x,y) ( (x) > (y) ? (x) : (y) )
 #define and &&
@@ -32,3 +34,8 @@ int* getTestArr(){
     
     return testArr;
 }
+int ascending(int a,int b){return a<b;}
+int descending(int a,int b){return a>b;}
+
+#define comparerDefintion int (*__compare)(int,int)
+#define comparerFunction __compare
